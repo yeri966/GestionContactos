@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<VBox spacing="10" alignment="CENTER" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="co.edu.uniquindio.contactos.controllers.ContactosViewController">
+    <Label text="Gestor de Contactos" style="-fx-font-size: 20px; -fx-font-weight: bold;" />
+
+    <TableView fx:id="tablaContactos">
+        <columns>
+            <TableColumn text="Nombre" fx:id="colNombre"/>
+            <TableColumn text="Apellido" fx:id="colApellido"/>
+            <TableColumn text="Teléfono" fx:id="colTelefono"/>
+            <TableColumn text="Email" fx:id="colEmail"/>
+        </columns>
+    </TableView>
+
+    <HBox spacing="10">
+        <TextField fx:id="txtNombre" promptText="Nombre"/>
+        <TextField fx:id="txtApellido" promptText="Apellido"/>
+        <TextField fx:id="txtTelefono" promptText="Teléfono"/>
+        <TextField fx:id="txtEmail" promptText="Email"/>
+    </HBox>
+
+    <HBox spacing="10">
+        <Button text="Seleccionar Foto" fx:id="btnSeleccionarFoto" onAction="#seleccionarFoto"/>
+    </HBox>
+
+    <HBox spacing="10">
+        <Button text="Agregar" fx:id="btnAgregar" onAction="#agregarContacto"/>
+        <Button text="Editar" fx:id="btnEditar" onAction="#editarContacto"/>
+        <Button text="Eliminar" fx:id="btnEliminar" onAction="#eliminarContacto"/>
+    </HBox>
+</VBox>
