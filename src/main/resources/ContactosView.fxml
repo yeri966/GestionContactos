@@ -4,6 +4,7 @@
 <?import javafx.scene.control.*?>
 <?import javafx.scene.layout.*?>
 
+<?import javafx.scene.image.ImageView?>
 <VBox spacing="10" alignment="CENTER" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="co.edu.uniquindio.contactos.controllers.ContactosViewController">
     <Label text="Gestor de Contactos" style="-fx-font-size: 20px; -fx-font-weight: bold;" />
 
@@ -13,6 +14,8 @@
             <TableColumn text="Apellido" fx:id="colApellido"/>
             <TableColumn text="Teléfono" fx:id="colTelefono"/>
             <TableColumn text="Email" fx:id="colEmail"/>
+            <TableColumn fx:id="colFoto" text="Foto" />
+            <TableColumn fx:id="colFechaNacimiento" text="Fecha de Nacimiento"/>
         </columns>
     </TableView>
 
@@ -21,6 +24,7 @@
         <TextField fx:id="txtApellido" promptText="Apellido"/>
         <TextField fx:id="txtTelefono" promptText="Teléfono"/>
         <TextField fx:id="txtEmail" promptText="Email"/>
+        <DatePicker fx:id="dpFechaNacimiento" layoutX="300" layoutY="250"/>
     </HBox>
 
     <HBox spacing="10">
@@ -32,4 +36,5 @@
         <Button text="Editar" fx:id="btnEditar" onAction="#editarContacto"/>
         <Button text="Eliminar" fx:id="btnEliminar" onAction="#eliminarContacto"/>
     </HBox>
+    <ComboBox fx:id="cmbFiltroBusqueda"/>
 </VBox>

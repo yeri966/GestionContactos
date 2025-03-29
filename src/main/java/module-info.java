@@ -2,6 +2,7 @@ module co.edu.uniquindio.contactos {
     requires javafx.controls;
     requires javafx.fxml;
     requires static lombok;
+    requires java.desktop;
 
 
     opens co.edu.uniquindio.contactos.app to javafx.graphics;
